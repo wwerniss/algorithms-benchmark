@@ -1,0 +1,23 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node0 [id="Node000000",label="core::patterns::IObservable\< T \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcore_1_1patterns_1_1IObservable.html",tooltip="Observable base class that notifies registered observers of state changes."];
+  Node0 -> Node1 [id="edge5_Node000000_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 [id="Node000001",label="core::sorting::ISortStrategy\< T \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcore_1_1sorting_1_1ISortStrategy.html",tooltip=" "];
+  Node1 -> Node2 [id="edge6_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="core::sorting::BubbleSort\< T \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcore_1_1sorting_1_1BubbleSort.html",tooltip=" "];
+  Node1 -> Node3 [id="edge7_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="core::sorting::Insertion\lSort\< T \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcore_1_1sorting_1_1InsertionSort.html",tooltip=" "];
+  Node1 -> Node4 [id="edge8_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="core::sorting::MergeSort\< T \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcore_1_1sorting_1_1MergeSort.html",tooltip=" "];
+  Node1 -> Node5 [id="edge9_Node000001_Node000005",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="core::sorting::QuickSort\< T \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcore_1_1sorting_1_1QuickSort.html",tooltip=" "];
+  Node1 -> Node6 [id="edge10_Node000001_Node000006",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="core::sorting::Selection\lSort\< T \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcore_1_1sorting_1_1SelectionSort.html",tooltip=" "];
+  Node1 -> Node7 [id="edge11_Node000001_Node000007",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="core::sorting::SortTimer\lDecorator\< T \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcore_1_1sorting_1_1SortTimerDecorator.html",tooltip=" "];
+}

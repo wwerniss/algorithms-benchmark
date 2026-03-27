@@ -1,20 +1,5 @@
 var searchData=
 [
-  ['_7ebst_0',['~BST',['../classcore_1_1trees_1_1BST.html#a5fcdf5803c81a30d6bd2116fa4ab4a2a',1,'core::trees::BST']]],
-  ['_7egraphvisualizationwidget_1',['~GraphVisualizationWidget',['../classGraphVisualizationWidget.html#af5361754cca884b32ab690a0d4b7996d',1,'GraphVisualizationWidget']]],
-  ['_7egraphwindow_2',['~GraphWindow',['../classGraphWindow.html#a31cafadc56ba526b06f099ccae1b8a42',1,'GraphWindow']]],
-  ['_7eicommand_3',['~ICommand',['../classcore_1_1patterns_1_1ICommand.html#acb26abe8c126469014f369b491452c6a',1,'core::patterns::ICommand']]],
-  ['_7eiobservable_4',['~IObservable',['../classcore_1_1patterns_1_1IObservable.html#aa2932ba6f240c194d7f223e02b502749',1,'core::patterns::IObservable']]],
-  ['_7eiobserver_5',['~IObserver',['../classcore_1_1patterns_1_1IObserver.html#a3e368d3c3273a5d47b6026ecfdf6d42c',1,'core::patterns::IObserver']]],
-  ['_7eioriginator_6',['~IOriginator',['../classcore_1_1patterns_1_1IOriginator.html#a6cecbb6d4ce8ff1020f3ccc30f5783e9',1,'core::patterns::IOriginator']]],
-  ['_7eipathfindingstrategy_7',['~IPathfindingStrategy',['../classcore_1_1graphs_1_1IPathfindingStrategy.html#a5cb9715f929a70c7ad030ec8335e6f7d',1,'core::graphs::IPathfindingStrategy']]],
-  ['_7eisortstrategy_8',['~ISortStrategy',['../classcore_1_1sorting_1_1ISortStrategy.html#a8030d71c1acf5f3f2638124d5504edf1',1,'core::sorting::ISortStrategy']]],
-  ['_7eistrategy_9',['~IStrategy',['../classcore_1_1patterns_1_1IStrategy.html#a8cb283951545017ad0db91b1237754d2',1,'core::patterns::IStrategy']]],
-  ['_7eitreevisitor_10',['~ITreeVisitor',['../classcore_1_1trees_1_1ITreeVisitor.html#a5c08381720568bcb60c72ad8aea6db23',1,'core::trees::ITreeVisitor']]],
-  ['_7emainwindow_11',['~MainWindow',['../classMainWindow.html#a1f7d2c56410fc1bfa135bb907d43313f',1,'MainWindow']]],
-  ['_7ememento_12',['~Memento',['../classcore_1_1patterns_1_1Memento.html#a299e4fba0a1a4e4cd0e85b1d118964fb',1,'core::patterns::Memento']]],
-  ['_7esortingwindow_13',['~SortingWindow',['../classSortingWindow.html#af3f58bfc5d6dcbfbde5808fb8448c06e',1,'SortingWindow']]],
-  ['_7etreevisualizationwidget_14',['~TreeVisualizationWidget',['../classTreeVisualizationWidget.html#a756ac60c8427a0d03c26db87e735b364',1,'TreeVisualizationWidget']]],
-  ['_7etreewindow_15',['~TreeWindow',['../classTreeWindow.html#a1e4847991e7e01441822dd30f86992a4',1,'TreeWindow']]],
-  ['_7evisualizationwidget_16',['~VisualizationWidget',['../classVisualizationWidget.html#a36817e1a073ce1d2a474b82a43840eab',1,'VisualizationWidget']]]
+  ['visit_0',['visit',['../classcore_1_1trees_1_1ITreeVisitor.html#ac591e3781dbcbdc65b364391d291a04d',1,'core::trees::ITreeVisitor::visit()'],['../classcore_1_1trees_1_1TreeSerializationVisitor.html#a58eab6e6ec3201a92db8651ba4ccd2fa',1,'core::trees::TreeSerializationVisitor::visit()'],['../classcore_1_1trees_1_1TreeCounterVisitor.html#a8eaed0f080306cc8edf4c8a5ab32bab4',1,'core::trees::TreeCounterVisitor::visit()']]],
+  ['visualizationwidget_1',['VisualizationWidget',['../classVisualizationWidget.html#abbed7b1390bdfd932283e8a482c44052',1,'VisualizationWidget']]]
 ];

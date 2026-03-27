@@ -1,7 +1,15 @@
 var searchData=
 [
-  ['test_0',['test',['../GraphTests_8cpp.html#a4966b261e372e6099cb6976c24dee336',1,'TEST(GraphTests, BFSPath):&#160;GraphTests.cpp'],['../GraphTests_8cpp.html#a8a491e972852960a5f9b5a1409b124a1',1,'TEST(GraphTests, DFSPath):&#160;GraphTests.cpp'],['../GraphTests_8cpp.html#a4db41f70c3ca2480b8581958a2ed7e86',1,'TEST(GraphTests, DijkstraPath):&#160;GraphTests.cpp'],['../GraphTests_8cpp.html#a2de833941ae4288f1f7ee56b9d5a1aa4',1,'TEST(GraphTests, NoPath):&#160;GraphTests.cpp'],['../SortingTests_8cpp.html#a21e9ea1e9c37510e9067afbfd6263119',1,'TEST(SortingTests, QuickSortBasic):&#160;SortingTests.cpp'],['../SortingTests_8cpp.html#af2b3fc789ae4e3948a075450680a0316',1,'TEST(SortingTests, MergeSortBasic):&#160;SortingTests.cpp'],['../SortingTests_8cpp.html#a1042d140b2849ad31297c1d7a65aea3b',1,'TEST(SortingTests, EmptyArray):&#160;SortingTests.cpp'],['../SortingTests_8cpp.html#abcdbb0853c6b21618aefc60645af8b98',1,'TEST(SortingTests, AlreadySorted):&#160;SortingTests.cpp'],['../TreeTests_8cpp.html#a2dba27011075e8c4f562b06ed7526ee7',1,'TEST(TreeTests, BSTInsertAndTraversal):&#160;TreeTests.cpp'],['../TreeTests_8cpp.html#ae64696e12d19d66fce9c11dcd6813a30',1,'TEST(TreeTests, AVLTreeInsertAndTraversal):&#160;TreeTests.cpp'],['../TreeTests_8cpp.html#aff2b992e2498714c28ad0f0e8afc7ad2',1,'TEST(TreeTests, EmptyTree):&#160;TreeTests.cpp']]],
-  ['treenode_1',['TreeNode',['../structcore_1_1trees_1_1TreeNode.html#a05a9014b3bd98162d80b41b34243455c',1,'core::trees::TreeNode']]],
-  ['treevisualizationwidget_2',['TreeVisualizationWidget',['../classTreeVisualizationWidget.html#ad7dfe0fa337c006664cbc69b34b5e7a6',1,'TreeVisualizationWidget']]],
-  ['treewindow_3',['TreeWindow',['../classTreeWindow.html#a6e8b56589b63b9843e8760f794e35be0',1,'TreeWindow']]]
+  ['savestate_0',['saveState',['../classcore_1_1patterns_1_1IOriginator.html#a287c99f09d5f19d3ec04104233968ce2',1,'core::patterns::IOriginator']]],
+  ['setdata_1',['setData',['../classVisualizationWidget.html#a522faf8c28628d5f612201055f322716',1,'VisualizationWidget']]],
+  ['setgraph_2',['setGraph',['../classGraphVisualizationWidget.html#a2b86cdd442e43a9699b76893e9f166ed',1,'GraphVisualizationWidget']]],
+  ['sethighlighted_3',['setHighlighted',['../classVisualizationWidget.html#a22023125cd36ae3ef3ef7c14f9231e5b',1,'VisualizationWidget']]],
+  ['setpath_4',['setPath',['../classGraphVisualizationWidget.html#a621f1547a6f119eec8888aec79fc632f',1,'GraphVisualizationWidget']]],
+  ['setstepcallback_5',['setStepCallback',['../classcore_1_1sorting_1_1ISortStrategy.html#a12442320dc71d7f34a31f5587f8253bb',1,'core::sorting::ISortStrategy']]],
+  ['settree_6',['setTree',['../classTreeVisualizationWidget.html#a30a0885bd849a4520f58e03511f0e3f2',1,'TreeVisualizationWidget']]],
+  ['sort_7',['sort',['../classcore_1_1sorting_1_1ISortStrategy.html#afcfe1102ae80c3a29d67993998fef3ed',1,'core::sorting::ISortStrategy::sort()'],['../classcore_1_1sorting_1_1SortTimerDecorator.html#afad13be009d12c159c7b4e741d4fc3f4',1,'core::sorting::SortTimerDecorator::sort()']]],
+  ['sortingwindow_8',['SortingWindow',['../classSortingWindow.html#a01ef5b9be50460d7244be5c15081b1bd',1,'SortingWindow']]],
+  ['sortstatememento_9',['SortStateMemento',['../classcore_1_1sorting_1_1SortStateMemento.html#ad7af6d6d8660fa65f26d9e3e78771ac5',1,'core::sorting::SortStateMemento']]],
+  ['sorttimerdecorator_10',['SortTimerDecorator',['../classcore_1_1sorting_1_1SortTimerDecorator.html#af7619fa024e2f867df878b4ada565b7f',1,'core::sorting::SortTimerDecorator']]],
+  ['stepcommand_11',['StepCommand',['../classcore_1_1sorting_1_1StepCommand.html#ac9e915da2ecda026ff44d4002460fce7',1,'core::sorting::StepCommand']]]
 ];

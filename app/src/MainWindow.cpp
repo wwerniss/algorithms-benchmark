@@ -2,9 +2,9 @@
 #include "SortingWindow.h"
 #include "GraphWindow.h"
 #include "TreeWindow.h"
+#include "HistoryWindow.h"
 #include <QVBoxLayout>
-#include <QLabel>
-#include <QPushButton>
+#include <QTabWidget>
 #include <QWidget>
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
@@ -15,43 +15,25 @@ MainWindow::~MainWindow() = default;
 
 void MainWindow::setupUi() {
     setWindowTitle("Algorithms Benchmark & Visualization");
-    resize(400, 300);
+    resize(1200, 800); 
 
     auto *centralWidget = new QWidget(this);
     auto *layout = new QVBoxLayout(centralWidget);
+    layout->setContentsMargins(5, 5, 5, 5); 
 
-    auto *titleLabel = new QLabel("Select an Algorithm Category:", this);
-    titleLabel->setAlignment(Qt::AlignCenter);
-    titleLabel->setStyleSheet("font-size: 18px; font-weight: bold; margin: 20px;");
-    layout->addWidget(titleLabel);
+    auto *tabWidget = new QTabWidget(this);
 
-    auto *btnSorting = new QPushButton("Sorting Algorithms", this);
-    auto *btnGraphs = new QPushButton("Graph Algorithms", this);
-    auto *btnTrees = new QPushButton("Tree Structures", this);
+    auto *sw = new SortingWindow(tabWidget);
+    auto *gw = new GraphWindow(tabWidget);
+    auto *tw = new TreeWindow(tabWidget);
+    auto *hw = new HistoryWindow(tabWidget);
 
-    connect(btnSorting, &QPushButton::clicked, this, [this]() {
-        auto *sw = new SortingWindow();
-        sw->setAttribute(Qt::WA_DeleteOnClose);
-        sw->show();
-    });
+    tabWidget->addTab(sw, "Sorting Algorithms");
+    tabWidget->addTab(gw, "Graph Algorithms");
+    tabWidget->addTab(tw, "Tree Structures");
+    tabWidget->addTab(hw, "Benchmark History");
 
-    connect(btnGraphs, &QPushButton::clicked, this, [this]() {
-        auto *gw = new GraphWindow();
-        gw->setAttribute(Qt::WA_DeleteOnClose);
-        gw->show();
-    });
-
-    connect(btnTrees, &QPushButton::clicked, this, [this]() {
-        auto *tw = new TreeWindow();
-        tw->setAttribute(Qt::WA_DeleteOnClose);
-        tw->show();
-    });
-
-    layout->addWidget(btnSorting);
-    layout->addWidget(btnGraphs);
-    layout->addWidget(btnTrees);
-
-    layout->addStretch();
+    layout->addWidget(tabWidget);
 
     setCentralWidget(centralWidget);
 }

@@ -2,6 +2,7 @@
 
 #include <memory>
 #include <vector>
+#include "ITreeVisitor.h"
 
 namespace core {
 namespace trees {
@@ -13,6 +14,12 @@ struct TreeNode {
     std::unique_ptr<TreeNode<T>> right;
     
     explicit TreeNode(T val) : data(val), left(nullptr), right(nullptr) {}
+
+    void accept(ITreeVisitor<T>* visitor) const {
+        if (visitor) {
+            visitor->visit(this);
+        }
+    }
 };
 
 template<typename T>
@@ -40,6 +47,14 @@ protected:
         }
     }
 
+    void inorderAcceptRec(const TreeNode<T>* node, ITreeVisitor<T>* visitor) const {
+        if (node && visitor) {
+            inorderAcceptRec(node->left.get(), visitor);
+            node->accept(visitor);
+            inorderAcceptRec(node->right.get(), visitor);
+        }
+    }
+
 public:
     BST() : root(nullptr) {}
     virtual ~BST() = default;
@@ -54,6 +69,10 @@ public:
         std::vector<T> result;
         inorderRec(root.get(), result);
         return result;
+    }
+
+    void acceptInorder(ITreeVisitor<T>* visitor) const {
+        inorderAcceptRec(root.get(), visitor);
     }
 };
 

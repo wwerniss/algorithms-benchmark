@@ -8,5 +8,6 @@ var searchData=
   ['ioriginator_5',['IOriginator',['../classcore_1_1patterns_1_1IOriginator.html',1,'core::patterns']]],
   ['ipathfindingstrategy_6',['IPathfindingStrategy',['../classcore_1_1graphs_1_1IPathfindingStrategy.html',1,'core::graphs']]],
   ['isortstrategy_7',['ISortStrategy',['../classcore_1_1sorting_1_1ISortStrategy.html',1,'core::sorting']]],
-  ['istrategy_8',['IStrategy',['../classcore_1_1patterns_1_1IStrategy.html',1,'core::patterns']]]
+  ['istrategy_8',['IStrategy',['../classcore_1_1patterns_1_1IStrategy.html',1,'core::patterns']]],
+  ['itreevisitor_9',['ITreeVisitor',['../classcore_1_1trees_1_1ITreeVisitor.html',1,'core::trees']]]
 ];

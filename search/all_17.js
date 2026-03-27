@@ -10,10 +10,11 @@ var searchData=
   ['_7eipathfindingstrategy_7',['~IPathfindingStrategy',['../classcore_1_1graphs_1_1IPathfindingStrategy.html#a5cb9715f929a70c7ad030ec8335e6f7d',1,'core::graphs::IPathfindingStrategy']]],
   ['_7eisortstrategy_8',['~ISortStrategy',['../classcore_1_1sorting_1_1ISortStrategy.html#a8030d71c1acf5f3f2638124d5504edf1',1,'core::sorting::ISortStrategy']]],
   ['_7eistrategy_9',['~IStrategy',['../classcore_1_1patterns_1_1IStrategy.html#a8cb283951545017ad0db91b1237754d2',1,'core::patterns::IStrategy']]],
-  ['_7emainwindow_10',['~MainWindow',['../classMainWindow.html#a1f7d2c56410fc1bfa135bb907d43313f',1,'MainWindow']]],
-  ['_7ememento_11',['~Memento',['../classcore_1_1patterns_1_1Memento.html#a299e4fba0a1a4e4cd0e85b1d118964fb',1,'core::patterns::Memento']]],
-  ['_7esortingwindow_12',['~SortingWindow',['../classSortingWindow.html#af3f58bfc5d6dcbfbde5808fb8448c06e',1,'SortingWindow']]],
-  ['_7etreevisualizationwidget_13',['~TreeVisualizationWidget',['../classTreeVisualizationWidget.html#a756ac60c8427a0d03c26db87e735b364',1,'TreeVisualizationWidget']]],
-  ['_7etreewindow_14',['~TreeWindow',['../classTreeWindow.html#a1e4847991e7e01441822dd30f86992a4',1,'TreeWindow']]],
-  ['_7evisualizationwidget_15',['~VisualizationWidget',['../classVisualizationWidget.html#a36817e1a073ce1d2a474b82a43840eab',1,'VisualizationWidget']]]
+  ['_7eitreevisitor_10',['~ITreeVisitor',['../classcore_1_1trees_1_1ITreeVisitor.html#a5c08381720568bcb60c72ad8aea6db23',1,'core::trees::ITreeVisitor']]],
+  ['_7emainwindow_11',['~MainWindow',['../classMainWindow.html#a1f7d2c56410fc1bfa135bb907d43313f',1,'MainWindow']]],
+  ['_7ememento_12',['~Memento',['../classcore_1_1patterns_1_1Memento.html#a299e4fba0a1a4e4cd0e85b1d118964fb',1,'core::patterns::Memento']]],
+  ['_7esortingwindow_13',['~SortingWindow',['../classSortingWindow.html#af3f58bfc5d6dcbfbde5808fb8448c06e',1,'SortingWindow']]],
+  ['_7etreevisualizationwidget_14',['~TreeVisualizationWidget',['../classTreeVisualizationWidget.html#a756ac60c8427a0d03c26db87e735b364',1,'TreeVisualizationWidget']]],
+  ['_7etreewindow_15',['~TreeWindow',['../classTreeWindow.html#a1e4847991e7e01441822dd30f86992a4',1,'TreeWindow']]],
+  ['_7evisualizationwidget_16',['~VisualizationWidget',['../classVisualizationWidget.html#a36817e1a073ce1d2a474b82a43840eab',1,'VisualizationWidget']]]
 ];

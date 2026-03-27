@@ -121,6 +121,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a127526b96d3536a82392bd3cae8fdfe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb8ff1a268a154fde84a4de0bb1bffc6" id="r_adb8ff1a268a154fde84a4de0bb1bffc6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1trees_1_1BST.html#adb8ff1a268a154fde84a4de0bb1bffc6">inorderTraversal</a> () const</td></tr>
 <tr class="separator:adb8ff1a268a154fde84a4de0bb1bffc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c868cffe02118e005637d5eeabe302a" id="r_a9c868cffe02118e005637d5eeabe302a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1trees_1_1BST.html#a9c868cffe02118e005637d5eeabe302a">acceptInorder</a> (<a class="el" href="classcore_1_1trees_1_1ITreeVisitor.html">ITreeVisitor</a>&lt; T &gt; *visitor) const</td></tr>
+<tr class="separator:a9c868cffe02118e005637d5eeabe302a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -128,6 +130,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:ae3cb4a8356ced0fcf36fc2ff5f2746a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fa844f1477033233a33bdddca59a43a" id="r_a5fa844f1477033233a33bdddca59a43a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1trees_1_1BST.html#a5fa844f1477033233a33bdddca59a43a">inorderRec</a> (const <a class="el" href="structcore_1_1trees_1_1TreeNode.html">TreeNode</a>&lt; T &gt; *node, std::vector&lt; T &gt; &amp;result) const</td></tr>
 <tr class="separator:a5fa844f1477033233a33bdddca59a43a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72588d1eab213f7599f09450b10c8476" id="r_a72588d1eab213f7599f09450b10c8476"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcore_1_1trees_1_1BST.html#a72588d1eab213f7599f09450b10c8476">inorderAcceptRec</a> (const <a class="el" href="structcore_1_1trees_1_1TreeNode.html">TreeNode</a>&lt; T &gt; *node, <a class="el" href="classcore_1_1trees_1_1ITreeVisitor.html">ITreeVisitor</a>&lt; T &gt; *visitor) const</td></tr>
+<tr class="separator:a72588d1eab213f7599f09450b10c8476"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -190,6 +194,34 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9c868cffe02118e005637d5eeabe302a" name="a9c868cffe02118e005637d5eeabe302a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c868cffe02118e005637d5eeabe302a">&#9670;&#160;</a></span>acceptInorder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcore_1_1trees_1_1BST.html">core::trees::BST</a>&lt; T &gt;::acceptInorder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcore_1_1trees_1_1ITreeVisitor.html">ITreeVisitor</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>visitor</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ae85cb5a945af6bce6995d0b231ae8828" name="ae85cb5a945af6bce6995d0b231ae8828"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae85cb5a945af6bce6995d0b231ae8828">&#9670;&#160;</a></span>getRoot()</h2>
 
@@ -211,6 +243,44 @@ template&lt;typename T &gt; </div>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72588d1eab213f7599f09450b10c8476" name="a72588d1eab213f7599f09450b10c8476"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72588d1eab213f7599f09450b10c8476">&#9670;&#160;</a></span>inorderAcceptRec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classcore_1_1trees_1_1BST.html">core::trees::BST</a>&lt; T &gt;::inorderAcceptRec </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structcore_1_1trees_1_1TreeNode.html">TreeNode</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcore_1_1trees_1_1ITreeVisitor.html">ITreeVisitor</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>visitor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -379,7 +449,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 27 2026 00:54:07 for Algorithms Benchmark by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Fri Mar 27 2026 01:36:39 for Algorithms Benchmark by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

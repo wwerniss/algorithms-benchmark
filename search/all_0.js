@@ -8,7 +8,7 @@ var searchData=
   ['addobserver_5',['addobserver',['../classcore_1_1sorting_1_1SortTimerDecorator.html#a1ed4dcb55119edfe1cf7c9cdde48d413',1,'core::sorting::SortTimerDecorator::addObserver()'],['../classcore_1_1patterns_1_1IObservable.html#a596e48e5629fdf5d3b7b39aa2740c9dd',1,'core::patterns::IObservable::addObserver()']]],
   ['addrecord_6',['addRecord',['../classcore_1_1benchmarks_1_1BenchmarkHistoryManager.html#a7275436ac15ed9085251697316d69d90',1,'core::benchmarks::BenchmarkHistoryManager']]],
   ['algorithmname_7',['algorithmName',['../structcore_1_1benchmarks_1_1BenchmarkRecord.html#a3e379f65b327f64c037b02c9f09e991f',1,'core::benchmarks::BenchmarkRecord']]],
-  ['algorithms_20benchmark_20visualization_20🚀_8',['Algorithms Benchmark &amp; Visualization 🚀',['../md_README.html',1,'']]],
+  ['algorithms_20benchmark_20visualization_8',['Algorithms Benchmark &amp; Visualization',['../md_README.html',1,'']]],
   ['audiosynthesizer_9',['audiosynthesizer',['../classAudioSynthesizer.html#ad24758c0f49b9db2ad34078c39b44ff0',1,'AudioSynthesizer::AudioSynthesizer()'],['../classAudioSynthesizer.html',1,'AudioSynthesizer']]],
   ['audiosynthesizer_2ecpp_10',['AudioSynthesizer.cpp',['../AudioSynthesizer_8cpp.html',1,'']]],
   ['audiosynthesizer_2eh_11',['AudioSynthesizer.h',['../AudioSynthesizer_8h.html',1,'']]],

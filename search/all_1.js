@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['benchmark_20visualization_20🚀_0',['Algorithms Benchmark &amp; Visualization 🚀',['../md_README.html',1,'']]],
+  ['benchmark_20visualization_0',['Algorithms Benchmark &amp; Visualization',['../md_README.html',1,'']]],
   ['benchmarkhistorymanager_1',['benchmarkhistorymanager',['../classcore_1_1benchmarks_1_1BenchmarkHistoryManager.html',1,'core::benchmarks::BenchmarkHistoryManager'],['../classcore_1_1benchmarks_1_1BenchmarkHistoryManager.html#ad13ab864dca28f1345ca00b8792e49a6',1,'core::benchmarks::BenchmarkHistoryManager::BenchmarkHistoryManager()']]],
   ['benchmarkhistorymanager_2eh_2',['BenchmarkHistoryManager.h',['../BenchmarkHistoryManager_8h.html',1,'']]],
   ['benchmarkrecord_3',['BenchmarkRecord',['../structcore_1_1benchmarks_1_1BenchmarkRecord.html',1,'core::benchmarks']]],

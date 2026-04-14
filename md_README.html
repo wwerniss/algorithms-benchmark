@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Algorithms Benchmark: Algorithms Benchmark &amp; Visualization 🚀</title>
+<title>Algorithms Benchmark: Algorithms Benchmark &amp; Visualization</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -86,7 +86,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 
 </div><!-- top -->
 <div><div class="header">
-  <div class="headertitle"><div class="title">Algorithms Benchmark &amp; Visualization 🚀</div></div>
+  <div class="headertitle"><div class="title">Algorithms Benchmark &amp; Visualization</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> Проект являє собою застосунок для демонстрації роботи різних класичних алгоритмів та структур даних. Проект чітко поділений на дві частини: незалежну алгоритмічну бібліотеку на чистому <b>C++17 (STL)</b> та графічний інтерфейс (GUI) на основі фреймворку <b>Qt5</b>.</p>
@@ -133,32 +133,64 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <li><code>undo()</code> — відкотити крок назад. Це дозволяє користувачеві в GUI робити "Undo/Redo" (або Play/Pause), покроково переміщуючись в історії алгоритму.</li>
 </ul>
 </li>
+<li><b>Builder (Будівельник)</b> Використовується для покрокового конструювання складних графів (<code>GraphBuilder</code>), дозволяючи гнучко додавати вершини, з'єднувати їх лінійно або випадковим чином. Це робить ініціалізацію графа в UI-коді значно чистішою.</li>
+<li><b>Facade (Фасад)</b> Застосований у системі бенчмаркінгу (<code>SortBenchmarkFacade</code>). Надає єдиний, простий інтерфейс для запуску масштабного тестування продуктивності всіх алгоритмів, приховуючи складну логіку інстанціювання стратегій і декораторів.</li>
+<li><b>State (Стан)</b> Використовується для управління станами головного вікна сортування (<code><a class="el" href="SortingWindowStates_8h.html">SortingWindowStates.h</a></code>). Завдяки класам <code><a class="el" href="classIdleState.html" title="Represents the base state where no algorithm is actively running or paused.">IdleState</a></code>, <code><a class="el" href="classRunningState.html" title="Represents the state where the sorting animation is actively playing.">RunningState</a></code> та <code><a class="el" href="classPausedState.html" title="Represents the state where the algorithm has paused mid-execution.">PausedState</a></code>, вікно автоматично вмикає або вимикає потрібні кнопки інтерфейсу без складних перевірок <code>if/else</code>, що робить логіку UI кристально чистою.</li>
+<li><b>Visitor (Відвідувач)</b> Дозволяє додавати нові операції до структур даних дерев (BST, AVL) без зміни їхнього вихідного коду. Інтерфейс <code>ITreeVisitor</code> та клас <code>TreeSerializationVisitor</code> успішно обходять вузли та виконують над ними дії, дотримуючись принципу "Open/Closed".</li>
+<li><b>Singleton (Одинак)</b> Керівник історії <code>BenchmarkHistoryManager</code> реалізований як глобальний Одинак (Singleton). Забезпечує єдину точку доступу для логування результатів продуктивності (<code>BenchmarkRecord</code>) для всіх підсистем. Дозволяє графічному вікну та бенчмаркам обмінюватись даними без прямої передачі залежностей.</li>
+<li><b>Observer (Спостерігач) — Розширене для журналу</b> Нова вкладка <code><a class="el" href="classHistoryWindow.html" title="GUI tab widget that observes and displays the global benchmark history.">HistoryWindow</a></code> підписана на <code>BenchmarkHistoryManager</code>. Кожен раз, коли завершується будь-який алгоритм (сортування, пошук шляху), істория розсилає сповіщення. <code><a class="el" href="classHistoryWindow.html" title="GUI tab widget that observes and displays the global benchmark history.">HistoryWindow</a></code> миттєво реагує та відмальовує нові результати, що повністю позбавляє від необхідності регулярного оновлення (polling).</li>
 </ol>
 <hr  />
 <h1><a class="anchor" id="autotoc_md8"></a>
 Збірка та запуск 🛠</h1>
-<p>Клонуйте репозиторій, після чого перейдіть у корінь проекту:</p>
-<div class="fragment"><div class="line">mkdir build &amp;&amp; cd build</div>
+<p>Клонуйте репозиторій, після чого перейдіть у корінь проекту: </p><div class="fragment"><div class="line">git clone https://github.com/wwerniss/algorithms-benchmark.git</div>
+<div class="line">cd algorithms-benchmark</div>
+</div><!-- fragment --><p>Для вашої зручності у репозиторії передбачені готові скрипти для збірки та запуску проекту під різні операційні системи у директорії <code>tools/</code>.</p>
+<blockquote class="doxtable">
+<p>&zwj;<b>Примітка:</b> На всіх платформах у вас повинні бути встановлені <code>CMake</code>, <code>C++17 компілятор</code> (GCC/Clang/MSVC) та бібліотека <code>Qt5</code> (віджети). Фреймворк <code>GTest</code> завантажиться автоматично під час збірки завдяки <code>CMake FetchContent</code>. </p>
+</blockquote>
+<h2><a class="anchor" id="autotoc_md9"></a>
+🪟 Windows (через скрипти)</h2>
+<p>Для користувачів Windows існують готові <code>.bat</code> файли у <code>tools/windows/</code>. Переконайтеся, що ви запускаєте їх з командного рядка розробника (наприклад, Developer Command Prompt for VS) або ж у вас коректно налаштовані змінні середовища <code>PATH</code> до компілятора та інструментів <code>Qt5</code>.</p>
+<div class="fragment"><div class="line">:: Збудувати весь проект та виконати тести</div>
+<div class="line">tools\windows\build.bat</div>
 <div class="line"> </div>
-<div class="line"># Для macOS, якщо Qt встановлено через Homebrew:</div>
-<div class="line"># CMAKE_PREFIX_PATH=$(brew --prefix qt5) або /opt/homebrew/anaconda3</div>
-<div class="line">cmake .. </div>
+<div class="line">:: Запустити вже зібраний головний застосунок</div>
+<div class="line">tools\windows\run.bat</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md10"></a>
+🐧 Linux (через скрипти)</h2>
+<p>Для Linux існують розроблені автоматичні bash-скрипти у папці <code>tools/linux</code>.</p>
+<div class="fragment"><div class="line"># Надайте права на виконання скриптам (виконується одноразово)</div>
+<div class="line">chmod +x tools/linux/build.sh</div>
+<div class="line">chmod +x tools/linux/run.sh</div>
 <div class="line"> </div>
-<div class="line"># Збірка проекту</div>
+<div class="line"># Зібрати весь проект та автоматично запустити тести</div>
+<div class="line">./tools/linux/build.sh</div>
+<div class="line"> </div>
+<div class="line"># Запустити головний застосунок після збірки</div>
+<div class="line">./tools/linux/run.sh</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md11"></a>
+🍎 macOS (через Makefile)</h2>
+<div class="fragment"><div class="line"># 1. Створення директорії та генерація Makefile</div>
+<div class="line">mkdir build &amp;&amp; cd build</div>
+<div class="line"> </div>
+<div class="line"># Якщо Qt встановлено через Homebrew, обов&#39;язково вкажіть шлях:</div>
+<div class="line">cmake -DCMAKE_PREFIX_PATH=$(brew --prefix qt5) .. </div>
+<div class="line"># Або: cmake -DCMAKE_PREFIX_PATH=/opt/homebrew/anaconda3 ..</div>
+<div class="line"> </div>
+<div class="line"># 2. Збірка проекту</div>
 <div class="line">make -j4</div>
 <div class="line"> </div>
-<div class="line"># Запуск застосунку</div>
+<div class="line"># 3. Запуск застосунку</div>
 <div class="line">./app/AlgorithmsApp</div>
 <div class="line"> </div>
-<div class="line"># Запуск юніт-тестів</div>
-<div class="line">cd build</div>
-<div class="line">ctest</div>
-<div class="line">./tests/AlgorithmsTests # Або напряму</div>
+<div class="line"># 4. Запуск автоматичних тестів</div>
+<div class="line">ctest --output-on-failure</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 14 2026 12:07:09 for Algorithms Benchmark by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Apr 14 2026 12:07:31 for Algorithms Benchmark by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

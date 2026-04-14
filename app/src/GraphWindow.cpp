@@ -2,10 +2,13 @@
 #include "graphs/BFS.h"
 #include "graphs/DFS.h"
 #include "graphs/Dijkstra.h"
+#include "graphs/GraphBuilder.h"
+#include "benchmarks/BenchmarkHistoryManager.h"
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QPushButton>
 #include <QLabel>
+#include <QElapsedTimer>
 #include <random>
 
 GraphWindow::GraphWindow(QWidget *parent) : QWidget(parent) {
@@ -39,12 +42,15 @@ void GraphWindow::setupUi() {
     auto *genBtn = new QPushButton("Generate Random Graph", this);
     connect(genBtn, &QPushButton::clicked, this, &GraphWindow::generateGraph);
 
+    m_timeLabel = new QLabel("Time: 0 ms");
+
     controlsLayout->addWidget(new QLabel("Algorithm:"));
     controlsLayout->addWidget(m_algoCombo);
     controlsLayout->addWidget(m_startNode);
     controlsLayout->addWidget(m_endNode);
     controlsLayout->addWidget(findBtn);
     controlsLayout->addWidget(genBtn);
+    controlsLayout->addWidget(m_timeLabel);
     controlsLayout->addStretch();
 
     m_visualizer = new GraphVisualizationWidget(this);
@@ -55,27 +61,17 @@ void GraphWindow::setupUi() {
 
 void GraphWindow::generateGraph() {
     int numNodes = 12; // Example fixed size
-    m_graph = core::graphs::Graph(numNodes);
     
+    core::graphs::GraphBuilder builder;
+    m_graph = *builder.addNodes(numNodes)
+                      .connectLinear(1.0)
+                      .connectRandomly(0.25, 1.0, 10.0)
+                      .build();
+                      
     m_startNode->setRange(0, numNodes - 1);
     m_endNode->setRange(0, numNodes - 1);
     m_startNode->setValue(0);
     m_endNode->setValue(numNodes - 1);
-
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> dis(1, 100);
-
-    // Random edges
-    for (int i = 0; i < numNodes; ++i) {
-        int edges = (dis(gen) % 3) + 1; // 1 to 3 edges per node
-        for (int e = 0; e < edges; ++e) {
-            int target = dis(gen) % numNodes;
-            if (target != i) {
-                m_graph.addEdge(i, target, dis(gen) % 10 + 1);
-            }
-        }
-    }
     
     m_visualizer->setGraph(m_graph);
     m_visualizer->resetPath();
@@ -97,7 +93,21 @@ void GraphWindow::findPath() {
     }
     
     if (strategy) {
+        QElapsedTimer timer;
+        timer.start();
         auto path = strategy->findPath(m_graph, start, end);
+        qint64 elapsed = timer.nsecsElapsed();
+        
         m_visualizer->setPath(path);
+        
+        double elapedMs = elapsed / 1000000.0;
+        m_timeLabel->setText(QString("Time: %1 ms").arg(elapedMs, 0, 'f', 3));
+        
+        std::string contextStr = "Graph: " + std::to_string(m_graph.getNumVertices()) + 
+                                 " nodes, Path: " + std::to_string(start) + " -> " + std::to_string(end);
+                                 
+        core::benchmarks::BenchmarkHistoryManager::getInstance().addRecord(
+            {algo.toStdString(), contextStr, elapedMs}
+        );
     }
 }

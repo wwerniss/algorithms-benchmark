@@ -5,6 +5,7 @@
 #include "graphs/Graph.h"
 #include <QComboBox>
 #include <QSpinBox>
+#include <QLabel>
 
 class GraphWindow : public QWidget {
     Q_OBJECT
@@ -26,4 +27,5 @@ private:
     QComboBox *m_algoCombo;
     QSpinBox *m_startNode;
     QSpinBox *m_endNode;
+    QLabel *m_timeLabel;
 };

@@ -11,7 +11,7 @@ template<typename T>
 class SortTimerDecorator : public ISortStrategy<T> {
 private:
     std::unique_ptr<ISortStrategy<T>> wrapped_;
-    long long lastDurationMs_ = 0;
+    double lastDurationMs_ = 0.0;
 
 public:
     explicit SortTimerDecorator(std::unique_ptr<ISortStrategy<T>> wrapped)
@@ -25,7 +25,7 @@ public:
         auto start = std::chrono::high_resolution_clock::now();
         wrapped_->sort(data);
         auto end = std::chrono::high_resolution_clock::now();
-        lastDurationMs_ = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+        lastDurationMs_ = std::chrono::duration<double, std::milli>(end - start).count();
     }
 
     void addObserver(patterns::IObserver<T>* observer) {
@@ -40,7 +40,7 @@ public:
         return wrapped_->getName() + " (Timed)";
     }
 
-    long long getLastDurationMs() const {
+    double getLastDurationMs() const {
         return lastDurationMs_;
     }
 };

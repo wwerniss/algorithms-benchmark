@@ -106,9 +106,10 @@ digraph "app/src/MainWindow.cpp"
   Node39 [id="Node000039",label="QVBoxLayout",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node37 -> Node24 [id="edge62_Node000037_Node000024",color="steelblue1",style="solid",tooltip=" "];
   Node37 -> Node40 [id="edge63_Node000037_Node000040",color="steelblue1",style="solid",tooltip=" "];
-  Node40 [id="Node000040",label="benchmarks/BenchmarkRecord.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
-  Node1 -> Node39 [id="edge64_Node000001_Node000039",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node41 [id="edge65_Node000001_Node000041",color="steelblue1",style="solid",tooltip=" "];
+  Node40 [id="Node000040",label="benchmarks/BenchmarkRecord.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$BenchmarkRecord_8h.html",tooltip=" "];
+  Node40 -> Node22 [id="edge64_Node000040_Node000022",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node39 [id="edge65_Node000001_Node000039",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node41 [id="edge66_Node000001_Node000041",color="steelblue1",style="solid",tooltip=" "];
   Node41 [id="Node000041",label="QTabWidget",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
-  Node1 -> Node5 [id="edge66_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node5 [id="edge67_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
 }

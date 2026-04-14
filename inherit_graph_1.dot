@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="core::graphs::Graph",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcore_1_1graphs_1_1Graph.html",tooltip="Represents a directed graph using an adjacency list."];
+  Node0 [id="Node000000",label="core::graphs::Edge",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structcore_1_1graphs_1_1Edge.html",tooltip="Represents a directed, weighted edge in a graph."];
 }

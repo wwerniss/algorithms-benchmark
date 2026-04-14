@@ -106,7 +106,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="contents">
 <a href="BenchmarkHistoryManager_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;BenchmarkRecord.h&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="BenchmarkRecord_8h.html">BenchmarkRecord.h</a>&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="Observer_8h.html">patterns/Observer.h</a>&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
@@ -136,7 +136,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classcore_1_1benchmarks_1_1BenchmarkHistoryManager.html#a7275436ac15ed9085251697316d69d90">   39</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1benchmarks_1_1BenchmarkHistoryManager.html#a7275436ac15ed9085251697316d69d90">addRecord</a>(<span class="keyword">const</span> BenchmarkRecord&amp; record) {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classcore_1_1benchmarks_1_1BenchmarkHistoryManager.html#a7275436ac15ed9085251697316d69d90">   39</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classcore_1_1benchmarks_1_1BenchmarkHistoryManager.html#a7275436ac15ed9085251697316d69d90">addRecord</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structcore_1_1benchmarks_1_1BenchmarkRecord.html">BenchmarkRecord</a>&amp; record) {</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        history.push_back(record);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_function" href="classcore_1_1patterns_1_1IObservable.html#af3757a8e4ac2f85eb3470086747887ee">notifyObservers</a>(history);</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
@@ -154,6 +154,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>} <span class="comment">// namespace core</span></div>
 </div>
+<div class="ttc" id="aBenchmarkRecord_8h_html"><div class="ttname"><a href="BenchmarkRecord_8h.html">BenchmarkRecord.h</a></div></div>
 <div class="ttc" id="aObserver_8h_html"><div class="ttname"><a href="Observer_8h.html">Observer.h</a></div><div class="ttdoc">Interfaces for the Observer design pattern.</div></div>
 <div class="ttc" id="aclasscore_1_1benchmarks_1_1BenchmarkHistoryManager_html"><div class="ttname"><a href="classcore_1_1benchmarks_1_1BenchmarkHistoryManager.html">core::benchmarks::BenchmarkHistoryManager</a></div><div class="ttdoc">Singleton manager that stores all benchmark runs and notifies UI observers.</div><div class="ttdef"><b>Definition</b> BenchmarkHistoryManager.h:14</div></div>
 <div class="ttc" id="aclasscore_1_1benchmarks_1_1BenchmarkHistoryManager_html_a2bbee74759b75f6368eeb1f1d3a136a9"><div class="ttname"><a href="classcore_1_1benchmarks_1_1BenchmarkHistoryManager.html#a2bbee74759b75f6368eeb1f1d3a136a9">core::benchmarks::BenchmarkHistoryManager::getInstance</a></div><div class="ttdeci">static BenchmarkHistoryManager &amp; getInstance()</div><div class="ttdoc">Access point for the Singleton instance.</div><div class="ttdef"><b>Definition</b> BenchmarkHistoryManager.h:30</div></div>
@@ -164,10 +165,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclasscore_1_1patterns_1_1IObservable_html"><div class="ttname"><a href="classcore_1_1patterns_1_1IObservable.html">core::patterns::IObservable</a></div><div class="ttdoc">Observable base class that notifies registered observers of state changes.</div><div class="ttdef"><b>Definition</b> Observer.h:34</div></div>
 <div class="ttc" id="aclasscore_1_1patterns_1_1IObservable_html_af3757a8e4ac2f85eb3470086747887ee"><div class="ttname"><a href="classcore_1_1patterns_1_1IObservable.html#af3757a8e4ac2f85eb3470086747887ee">core::patterns::IObservable&lt; BenchmarkRecord &gt;::notifyObservers</a></div><div class="ttdeci">void notifyObservers(const std::vector&lt; BenchmarkRecord &gt; &amp;data)</div><div class="ttdoc">Notifies all registered observers of a state change.</div><div class="ttdef"><b>Definition</b> Observer.h:61</div></div>
 <div class="ttc" id="anamespacecore_html"><div class="ttname"><a href="namespacecore.html">core</a></div><div class="ttdef"><b>Definition</b> BenchmarkHistoryManager.h:7</div></div>
+<div class="ttc" id="astructcore_1_1benchmarks_1_1BenchmarkRecord_html"><div class="ttname"><a href="structcore_1_1benchmarks_1_1BenchmarkRecord.html">core::benchmarks::BenchmarkRecord</a></div><div class="ttdoc">Represents a single benchmark test result.</div><div class="ttdef"><b>Definition</b> BenchmarkRecord.h:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 14 2026 12:05:41 for Algorithms Benchmark by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Apr 14 2026 12:06:23 for Algorithms Benchmark by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

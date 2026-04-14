@@ -123,5 +123,17 @@ digraph "app/src/SortingWindow.cpp"
   Node1 -> Node41 [id="edge77_Node000001_Node000041",color="steelblue1",style="solid",tooltip=" "];
   Node41 [id="Node000041",label="QDateTime",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
   Node1 -> Node42 [id="edge78_Node000001_Node000042",color="steelblue1",style="solid",tooltip=" "];
-  Node42 [id="Node000042",label="sorting/SortBenchmarkFacade.h",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node42 [id="Node000042",label="sorting/SortBenchmarkFacade.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$SortBenchmarkFacade_8h.html",tooltip=" "];
+  Node42 -> Node24 [id="edge79_Node000042_Node000024",color="steelblue1",style="solid",tooltip=" "];
+  Node42 -> Node43 [id="edge80_Node000042_Node000043",color="steelblue1",style="solid",tooltip=" "];
+  Node43 [id="Node000043",label="benchmarks/BenchmarkHistory\lManager.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$BenchmarkHistoryManager_8h.html",tooltip=" "];
+  Node43 -> Node44 [id="edge81_Node000043_Node000044",color="steelblue1",style="solid",tooltip=" "];
+  Node44 [id="Node000044",label="BenchmarkRecord.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$BenchmarkRecord_8h.html",tooltip=" "];
+  Node44 -> Node20 [id="edge82_Node000044_Node000020",color="steelblue1",style="solid",tooltip=" "];
+  Node43 -> Node22 [id="edge83_Node000043_Node000022",color="steelblue1",style="solid",tooltip=" "];
+  Node43 -> Node7 [id="edge84_Node000043_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node42 -> Node7 [id="edge85_Node000042_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node42 -> Node20 [id="edge86_Node000042_Node000020",color="steelblue1",style="solid",tooltip=" "];
+  Node42 -> Node45 [id="edge87_Node000042_Node000045",color="steelblue1",style="solid",tooltip=" "];
+  Node45 [id="Node000045",label="utility",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
 }

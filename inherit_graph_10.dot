@@ -5,7 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="core::patterns::Memento",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcore_1_1patterns_1_1Memento.html",tooltip="Stores the internal state of an Originator object."];
-  Node0 -> Node1 [id="edge22_Node000000_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node1 [id="Node000001",label="core::sorting::SortState\lMemento\< T \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcore_1_1sorting_1_1SortStateMemento.html",tooltip=" "];
+  Node0 [id="Node000000",label="core::patterns::IStrategy\< T \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcore_1_1patterns_1_1IStrategy.html",tooltip=" "];
 }

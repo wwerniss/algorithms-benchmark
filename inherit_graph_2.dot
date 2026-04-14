@@ -5,11 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="core::graphs::IPathfinding\lStrategy",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcore_1_1graphs_1_1IPathfindingStrategy.html",tooltip=" "];
-  Node0 -> Node1 [id="edge1_Node000000_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node1 [id="Node000001",label="core::graphs::BFS",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcore_1_1graphs_1_1BFS.html",tooltip=" "];
-  Node0 -> Node2 [id="edge2_Node000000_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="core::graphs::DFS",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcore_1_1graphs_1_1DFS.html",tooltip=" "];
-  Node0 -> Node3 [id="edge3_Node000000_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node3 [id="Node000003",label="core::graphs::Dijkstra",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcore_1_1graphs_1_1Dijkstra.html",tooltip="Concrete strategy implementing Dijkstra's pathfinding algorithm."];
+  Node0 [id="Node000000",label="core::graphs::Graph",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcore_1_1graphs_1_1Graph.html",tooltip="Represents a directed graph using an adjacency list."];
 }

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['weight_0',['weight',['../structcore_1_1graphs_1_1Edge.html#ad1017792f33f5961ac24b26d064addc8',1,'core::graphs::Edge']]]
+  ['observers_0',['observers',['../classcore_1_1patterns_1_1IObservable.html#a95c9bfa3ec4b9152dd7961c1e983a46a',1,'core::patterns::IObservable']]]
 ];

@@ -11,5 +11,6 @@ var searchData=
   ['sortingwindow_8',['SortingWindow',['../classSortingWindow.html#a01ef5b9be50460d7244be5c15081b1bd',1,'SortingWindow']]],
   ['sortstatememento_9',['SortStateMemento',['../classcore_1_1sorting_1_1SortStateMemento.html#ad7af6d6d8660fa65f26d9e3e78771ac5',1,'core::sorting::SortStateMemento']]],
   ['sorttimerdecorator_10',['SortTimerDecorator',['../classcore_1_1sorting_1_1SortTimerDecorator.html#af7619fa024e2f867df878b4ada565b7f',1,'core::sorting::SortTimerDecorator']]],
-  ['stepcommand_11',['StepCommand',['../classcore_1_1sorting_1_1StepCommand.html#ac9e915da2ecda026ff44d4002460fce7',1,'core::sorting::StepCommand']]]
+  ['startsynth_11',['startSynth',['../classAudioSynthesizer.html#a594ef1e62632470d2b8a5e271a98b61a',1,'AudioSynthesizer']]],
+  ['stepcommand_12',['StepCommand',['../classcore_1_1sorting_1_1StepCommand.html#ac9e915da2ecda026ff44d4002460fce7',1,'core::sorting::StepCommand']]]
 ];

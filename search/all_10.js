@@ -20,6 +20,7 @@ var searchData=
   ['sortmemento_2eh_17',['SortMemento.h',['../SortMemento_8h.html',1,'']]],
   ['sortstatememento_18',['sortstatememento',['../classcore_1_1sorting_1_1SortStateMemento.html',1,'core::sorting::SortStateMemento&lt; T &gt;'],['../classcore_1_1sorting_1_1SortStateMemento.html#ad7af6d6d8660fa65f26d9e3e78771ac5',1,'core::sorting::SortStateMemento::SortStateMemento()']]],
   ['sorttimerdecorator_19',['sorttimerdecorator',['../classcore_1_1sorting_1_1SortTimerDecorator.html',1,'core::sorting::SortTimerDecorator&lt; T &gt;'],['../classcore_1_1sorting_1_1SortTimerDecorator.html#af7619fa024e2f867df878b4ada565b7f',1,'core::sorting::SortTimerDecorator::SortTimerDecorator()']]],
-  ['stepcommand_20',['stepcommand',['../classcore_1_1sorting_1_1StepCommand.html',1,'core::sorting::StepCommand&lt; T &gt;'],['../classcore_1_1sorting_1_1StepCommand.html#ac9e915da2ecda026ff44d4002460fce7',1,'core::sorting::StepCommand::StepCommand()']]],
-  ['stepcommand_2eh_21',['StepCommand.h',['../StepCommand_8h.html',1,'']]]
+  ['startsynth_20',['startSynth',['../classAudioSynthesizer.html#a594ef1e62632470d2b8a5e271a98b61a',1,'AudioSynthesizer']]],
+  ['stepcommand_21',['stepcommand',['../classcore_1_1sorting_1_1StepCommand.html',1,'core::sorting::StepCommand&lt; T &gt;'],['../classcore_1_1sorting_1_1StepCommand.html#ac9e915da2ecda026ff44d4002460fce7',1,'core::sorting::StepCommand::StepCommand()']]],
+  ['stepcommand_2eh_22',['StepCommand.h',['../StepCommand_8h.html',1,'']]]
 ];

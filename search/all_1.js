@@ -10,5 +10,6 @@ var searchData=
   ['bst_7',['bst',['../classcore_1_1trees_1_1BST.html',1,'core::trees::BST&lt; T &gt;'],['../classcore_1_1trees_1_1BST.html#a0ca093bf51acebf6eccc43d5579d9118',1,'core::trees::BST::BST()']]],
   ['bst_2eh_8',['BST.h',['../BST_8h.html',1,'']]],
   ['bubblesort_9',['BubbleSort',['../classcore_1_1sorting_1_1BubbleSort.html',1,'core::sorting']]],
-  ['bubblesort_2eh_10',['BubbleSort.h',['../BubbleSort_8h.html',1,'']]]
+  ['bubblesort_2eh_10',['BubbleSort.h',['../BubbleSort_8h.html',1,'']]],
+  ['build_11',['build',['../classcore_1_1graphs_1_1GraphBuilder.html#a0122b64a91896c8e78047742a39d0553',1,'core::graphs::GraphBuilder']]]
 ];

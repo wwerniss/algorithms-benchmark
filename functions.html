@@ -136,6 +136,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <li>acceptInorder()&#160;:&#160;<a class="el" href="classcore_1_1trees_1_1BST.html#a9c868cffe02118e005637d5eeabe302a">core::trees::BST&lt; T &gt;</a></li>
 <li>addAlgorithm()&#160;:&#160;<a class="el" href="classcore_1_1sorting_1_1SortBenchmarkFacade.html#ae691c6d6a457726007ac808bc2a1c0b5">core::sorting::SortBenchmarkFacade</a></li>
 <li>addEdge()&#160;:&#160;<a class="el" href="classcore_1_1graphs_1_1Graph.html#ae0b6c98c0aa4de91adcf51ff924a6f62">core::graphs::Graph</a></li>
+<li>addNodes()&#160;:&#160;<a class="el" href="classcore_1_1graphs_1_1GraphBuilder.html#a67b0b479064e95c19f609ad99d54d47d">core::graphs::GraphBuilder</a></li>
 <li>addObserver()&#160;:&#160;<a class="el" href="classcore_1_1patterns_1_1IObservable.html#a596e48e5629fdf5d3b7b39aa2740c9dd">core::patterns::IObservable&lt; T &gt;</a>, <a class="el" href="classcore_1_1sorting_1_1SortTimerDecorator.html#a1ed4dcb55119edfe1cf7c9cdde48d413">core::sorting::SortTimerDecorator&lt; T &gt;</a></li>
 <li>addRecord()&#160;:&#160;<a class="el" href="classcore_1_1benchmarks_1_1BenchmarkHistoryManager.html#a7275436ac15ed9085251697316d69d90">core::benchmarks::BenchmarkHistoryManager</a></li>
 <li>algorithmName&#160;:&#160;<a class="el" href="structcore_1_1benchmarks_1_1BenchmarkRecord.html#a3e379f65b327f64c037b02c9f09e991f">core::benchmarks::BenchmarkRecord</a></li>
@@ -148,11 +149,15 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <h3><a id="index_b" name="index_b"></a>- b -</h3><ul>
 <li>BenchmarkHistoryManager()&#160;:&#160;<a class="el" href="classcore_1_1benchmarks_1_1BenchmarkHistoryManager.html#ad13ab864dca28f1345ca00b8792e49a6">core::benchmarks::BenchmarkHistoryManager</a></li>
 <li>BST()&#160;:&#160;<a class="el" href="classcore_1_1trees_1_1BST.html#a0ca093bf51acebf6eccc43d5579d9118">core::trees::BST&lt; T &gt;</a></li>
+<li>build()&#160;:&#160;<a class="el" href="classcore_1_1graphs_1_1GraphBuilder.html#a0122b64a91896c8e78047742a39d0553">core::graphs::GraphBuilder</a></li>
 </ul>
 
 
 <h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
 <li>clearAlgorithms()&#160;:&#160;<a class="el" href="classcore_1_1sorting_1_1SortBenchmarkFacade.html#a477c376bef5bc163120a6dc00d925c80">core::sorting::SortBenchmarkFacade</a></li>
+<li>connectFully()&#160;:&#160;<a class="el" href="classcore_1_1graphs_1_1GraphBuilder.html#ac855faebf6068dca73d300e46864dbe8">core::graphs::GraphBuilder</a></li>
+<li>connectLinear()&#160;:&#160;<a class="el" href="classcore_1_1graphs_1_1GraphBuilder.html#a3e3d12adc56445d9143403e62619ce58">core::graphs::GraphBuilder</a></li>
+<li>connectRandomly()&#160;:&#160;<a class="el" href="classcore_1_1graphs_1_1GraphBuilder.html#a8e8fd9749dbc6f14dc51ccbde93a26ff">core::graphs::GraphBuilder</a></li>
 <li>context&#160;:&#160;<a class="el" href="structcore_1_1benchmarks_1_1BenchmarkRecord.html#a96fa8c27615c97365d89a5892d708571">core::benchmarks::BenchmarkRecord</a></li>
 <li>create()&#160;:&#160;<a class="el" href="classcore_1_1sorting_1_1SortFactory.html#aacd6d672e1238963acdff8ef661f708f">core::sorting::SortFactory</a></li>
 </ul>
@@ -189,6 +194,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <li>getState()&#160;:&#160;<a class="el" href="classcore_1_1patterns_1_1Memento.html#a82c4800c9642aff5d344a75068577104">core::patterns::Memento</a>, <a class="el" href="classcore_1_1sorting_1_1SortStateMemento.html#a15b1c2cb8e486739bcd1be258e9defe4">core::sorting::SortStateMemento&lt; T &gt;</a></li>
 <li>getVector()&#160;:&#160;<a class="el" href="classcore_1_1sorting_1_1SortStateMemento.html#a1524b70409a77558ce2fba1ed2d17901">core::sorting::SortStateMemento&lt; T &gt;</a></li>
 <li>Graph()&#160;:&#160;<a class="el" href="classcore_1_1graphs_1_1Graph.html#a5639a56978a3ccdc7159ecb0cbc38427">core::graphs::Graph</a></li>
+<li>GraphBuilder()&#160;:&#160;<a class="el" href="classcore_1_1graphs_1_1GraphBuilder.html#aad82a0765f866d4bd47f5ae3d73793bc">core::graphs::GraphBuilder</a></li>
 <li>GraphVisualizationWidget()&#160;:&#160;<a class="el" href="classGraphVisualizationWidget.html#a8ceafdbc11baeeafce2d9090d5c74ee8">GraphVisualizationWidget</a></li>
 <li>GraphWindow()&#160;:&#160;<a class="el" href="classGraphWindow.html#a68f193cacc0237a41d8c44923b53c11a">GraphWindow</a></li>
 </ul>
@@ -339,7 +345,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 14 2026 12:06:23 for Algorithms Benchmark by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Apr 14 2026 12:07:09 for Algorithms Benchmark by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -5,7 +5,7 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="core::patterns::IObservable\l\< BenchmarkRecord \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcore_1_1patterns_1_1IObservable.html",tooltip=" "];
-  Node0 -> Node1 [id="edge5_Node000000_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node1 [id="Node000001",label="core::benchmarks::Benchmark\lHistoryManager",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcore_1_1benchmarks_1_1BenchmarkHistoryManager.html",tooltip="Singleton manager that stores all benchmark runs and notifies UI observers."];
+  Node0 [id="Node000000",label="core::patterns::ICommand",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcore_1_1patterns_1_1ICommand.html",tooltip=" "];
+  Node0 -> Node1 [id="edge4_Node000000_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node1 [id="Node000001",label="core::sorting::StepCommand\< T \>",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classcore_1_1sorting_1_1StepCommand.html",tooltip=" "];
 }

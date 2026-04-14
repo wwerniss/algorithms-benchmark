@@ -51,7 +51,9 @@ digraph "app/include/SortingWindow.h"
   Node18 -> Node21 [id="edge25_Node000018_Node000021",color="steelblue1",style="solid",tooltip=" "];
   Node21 [id="Node000021",label="patterns/Observer.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Observer_8h.html",tooltip="Interfaces for the Observer design pattern."];
   Node21 -> Node6 [id="edge26_Node000021_Node000006",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node21 [id="edge27_Node000001_Node000021",color="steelblue1",style="solid",tooltip=" "];
-  Node1 -> Node22 [id="edge28_Node000001_Node000022",color="steelblue1",style="solid",tooltip=" "];
-  Node22 [id="Node000022",label="patterns/Command.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Command_8h.html",tooltip=" "];
+  Node21 -> Node22 [id="edge27_Node000021_Node000022",color="steelblue1",style="solid",tooltip=" "];
+  Node22 [id="Node000022",label="algorithm",height=0.2,width=0.4,color="grey60", fillcolor="#E0E0E0", style="filled",tooltip=" "];
+  Node1 -> Node21 [id="edge28_Node000001_Node000021",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node23 [id="edge29_Node000001_Node000023",color="steelblue1",style="solid",tooltip=" "];
+  Node23 [id="Node000023",label="patterns/Command.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Command_8h.html",tooltip=" "];
 }

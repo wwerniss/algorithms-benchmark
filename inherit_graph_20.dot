@@ -5,11 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="IWindowActivityState",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classIWindowActivityState.html",tooltip="Interface for the State design pattern applied to SortingWindow."];
-  Node0 -> Node1 [id="edge25_Node000000_Node000001",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node1 [id="Node000001",label="IdleState",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classIdleState.html",tooltip="Represents the base state where no algorithm is actively running or paused."];
-  Node0 -> Node2 [id="edge26_Node000000_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node2 [id="Node000002",label="PausedState",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classPausedState.html",tooltip="Represents the state where the algorithm has paused mid-execution."];
-  Node0 -> Node3 [id="edge27_Node000000_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
-  Node3 [id="Node000003",label="RunningState",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classRunningState.html",tooltip="Represents the state where the sorting animation is actively playing."];
+  Node0 [id="Node000000",label="DrawNode",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structDrawNode.html",tooltip=" "];
 }

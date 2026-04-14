@@ -12,6 +12,7 @@ var searchData=
   ['getstate_9',['getstate',['../classcore_1_1patterns_1_1Memento.html#a82c4800c9642aff5d344a75068577104',1,'core::patterns::Memento::getState()'],['../classcore_1_1sorting_1_1SortStateMemento.html#a15b1c2cb8e486739bcd1be258e9defe4',1,'core::sorting::SortStateMemento::getState() const override']]],
   ['getvector_10',['getVector',['../classcore_1_1sorting_1_1SortStateMemento.html#a1524b70409a77558ce2fba1ed2d17901',1,'core::sorting::SortStateMemento']]],
   ['graph_11',['Graph',['../classcore_1_1graphs_1_1Graph.html#a5639a56978a3ccdc7159ecb0cbc38427',1,'core::graphs::Graph']]],
-  ['graphvisualizationwidget_12',['GraphVisualizationWidget',['../classGraphVisualizationWidget.html#a8ceafdbc11baeeafce2d9090d5c74ee8',1,'GraphVisualizationWidget']]],
-  ['graphwindow_13',['GraphWindow',['../classGraphWindow.html#a68f193cacc0237a41d8c44923b53c11a',1,'GraphWindow']]]
+  ['graphbuilder_12',['GraphBuilder',['../classcore_1_1graphs_1_1GraphBuilder.html#aad82a0765f866d4bd47f5ae3d73793bc',1,'core::graphs::GraphBuilder']]],
+  ['graphvisualizationwidget_13',['GraphVisualizationWidget',['../classGraphVisualizationWidget.html#a8ceafdbc11baeeafce2d9090d5c74ee8',1,'GraphVisualizationWidget']]],
+  ['graphwindow_14',['GraphWindow',['../classGraphWindow.html#a68f193cacc0237a41d8c44923b53c11a',1,'GraphWindow']]]
 ];

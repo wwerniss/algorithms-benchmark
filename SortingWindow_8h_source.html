@@ -108,59 +108,100 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;QWidget&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QTimer&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QLabel&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="VisualizationWidget_8h.html">VisualizationWidget.h</a>&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="ISortStrategy_8h.html">sorting/ISortStrategy.h</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="Observer_8h.html">patterns/Observer.h</a>&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="Command_8h.html">patterns/Command.h</a>&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classSortingWindow.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="classSortingWindow.html">SortingWindow</a> : <span class="keyword">public</span> QWidget, <span class="keyword">public</span> <a class="code hl_class" href="classcore_1_1patterns_1_1IObserver.html">core::patterns::IObserver</a>&lt;int&gt; {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    Q_OBJECT</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classSortingWindow.html">SortingWindow</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classSortingWindow.html#af3f58bfc5d6dcbfbde5808fb8448c06e">   18</a></span>    <a class="code hl_function" href="classSortingWindow.html#af3f58bfc5d6dcbfbde5808fb8448c06e">~SortingWindow</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classSortingWindow.html#aa4dd820955ee175a7464509402d5489c">onUpdate</a>(<span class="keyword">const</span> std::vector&lt;int&gt;&amp; data) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">private</span> slots:</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> startSorting();</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> stepForward();</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> stepBackward(); <span class="comment">// Undo</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> updateVisualization();</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> setupUi();</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> generateData();</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> setUIState(<span class="keyword">const</span> std::vector&lt;int&gt;&amp; data);</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QElapsedTimer&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;QLabel&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;QSlider&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;QPushButton&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;QComboBox&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;QMessageBox&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="AudioSynthesizer_8h.html">AudioSynthesizer.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="VisualizationWidget_8h.html">VisualizationWidget.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="ISortStrategy_8h.html">sorting/ISortStrategy.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="Observer_8h.html">patterns/Observer.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="Command_8h.html">patterns/Command.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">class </span><a class="code hl_class" href="classIWindowActivityState.html">IWindowActivityState</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classSortingWindow.html">   21</a></span><span class="keyword">class </span><a class="code hl_class" href="classSortingWindow.html">SortingWindow</a> : <span class="keyword">public</span> QWidget, <span class="keyword">public</span> <a class="code hl_class" href="classcore_1_1patterns_1_1IObserver.html">core::patterns::IObserver</a>&lt;int&gt; {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    Q_OBJECT</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classSortingWindow.html#a9d0d06d13da18d89abc00b2eb91d4767">   23</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classIdleState.html">IdleState</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classSortingWindow.html#a53d39bf74309c8c448c458a6a4079724">   24</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classRunningState.html">RunningState</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classSortingWindow.html#ab5fb293c5b3f03a7793f2cf63187a6db">   25</a></span>    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="classPausedState.html">PausedState</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">explicit</span> <a class="code hl_class" href="classSortingWindow.html">SortingWindow</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classSortingWindow.html#af3f58bfc5d6dcbfbde5808fb8448c06e">   29</a></span>    <a class="code hl_function" href="classSortingWindow.html#af3f58bfc5d6dcbfbde5808fb8448c06e">~SortingWindow</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classSortingWindow.html#aa4dd820955ee175a7464509402d5489c">onUpdate</a>(<span class="keyword">const</span> std::vector&lt;int&gt;&amp; data) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_class" href="classVisualizationWidget.html">VisualizationWidget</a> *m_visualizer;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    QLabel *m_timeLabel;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    std::vector&lt;int&gt; m_data;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    std::vector&lt;std::unique_ptr&lt;core::patterns::ICommand&gt;&gt; m_commands;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">int</span> m_commandIndex = -1; <span class="comment">// Current state in history</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    std::vector&lt;int&gt; m_lastState;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    QTimer *m_timer;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">private</span> slots:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> startSorting();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> stepForward();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> stepBackward(); <span class="comment">// Undo</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> updateVisualization();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> changeDelay(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> updateTimeLabel();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> onTimerTick();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> toggleSound();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> setupUi();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> generateData();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> setUIState(<span class="keyword">const</span> std::vector&lt;int&gt;&amp; data);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> setState(std::unique_ptr&lt;IWindowActivityState&gt; state);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> playAnimation();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> pauseAnimation();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_class" href="classVisualizationWidget.html">VisualizationWidget</a> *m_visualizer;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    QLabel *m_timeLabel;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    QSlider *m_delaySlider;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    QPushButton *m_startBtn;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    QPushButton *m_stepBackBtn;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    QPushButton *m_stepFwdBtn;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    QPushButton *m_playBtn;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    QPushButton *m_soundBtn;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_class" href="classAudioSynthesizer.html">AudioSynthesizer</a> *m_synthesizer;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">bool</span> m_soundEnabled = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    QComboBox *m_algoCombo;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    QComboBox *m_sizeCombo;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    std::unique_ptr&lt;IWindowActivityState&gt; m_currentState;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    std::vector&lt;int&gt; m_data;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    std::vector&lt;std::unique_ptr&lt;core::patterns::ICommand&gt;&gt; m_commands;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">int</span> m_commandIndex = -1; <span class="comment">// Current state in history</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    std::vector&lt;int&gt; m_lastState;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    QTimer *m_timer;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    QTimer *m_uiTimer;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    QElapsedTimer m_stopwatch;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    qint64 m_accumulatedTime = 0;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>};</div>
 </div>
+<div class="ttc" id="aAudioSynthesizer_8h_html"><div class="ttname"><a href="AudioSynthesizer_8h.html">AudioSynthesizer.h</a></div></div>
 <div class="ttc" id="aCommand_8h_html"><div class="ttname"><a href="Command_8h.html">Command.h</a></div></div>
 <div class="ttc" id="aISortStrategy_8h_html"><div class="ttname"><a href="ISortStrategy_8h.html">ISortStrategy.h</a></div></div>
 <div class="ttc" id="aObserver_8h_html"><div class="ttname"><a href="Observer_8h.html">Observer.h</a></div><div class="ttdoc">Interfaces for the Observer design pattern.</div></div>
 <div class="ttc" id="aVisualizationWidget_8h_html"><div class="ttname"><a href="VisualizationWidget_8h.html">VisualizationWidget.h</a></div></div>
-<div class="ttc" id="aclassSortingWindow_html"><div class="ttname"><a href="classSortingWindow.html">SortingWindow</a></div><div class="ttdef"><b>Definition</b> SortingWindow.h:13</div></div>
-<div class="ttc" id="aclassSortingWindow_html_aa4dd820955ee175a7464509402d5489c"><div class="ttname"><a href="classSortingWindow.html#aa4dd820955ee175a7464509402d5489c">SortingWindow::onUpdate</a></div><div class="ttdeci">void onUpdate(const std::vector&lt; int &gt; &amp;data) override</div><div class="ttdoc">Callback method invoked when the state of the Observable changes.</div><div class="ttdef"><b>Definition</b> SortingWindow.cpp:87</div></div>
+<div class="ttc" id="aclassAudioSynthesizer_html"><div class="ttname"><a href="classAudioSynthesizer.html">AudioSynthesizer</a></div><div class="ttdef"><b>Definition</b> AudioSynthesizer.h:10</div></div>
+<div class="ttc" id="aclassIWindowActivityState_html"><div class="ttname"><a href="classIWindowActivityState.html">IWindowActivityState</a></div><div class="ttdoc">Interface for the State design pattern applied to SortingWindow.</div><div class="ttdef"><b>Definition</b> SortingWindowStates.h:12</div></div>
+<div class="ttc" id="aclassIdleState_html"><div class="ttname"><a href="classIdleState.html">IdleState</a></div><div class="ttdoc">Represents the base state where no algorithm is actively running or paused.</div><div class="ttdef"><b>Definition</b> SortingWindowStates.h:65</div></div>
+<div class="ttc" id="aclassPausedState_html"><div class="ttname"><a href="classPausedState.html">PausedState</a></div><div class="ttdoc">Represents the state where the algorithm has paused mid-execution.</div><div class="ttdef"><b>Definition</b> SortingWindowStates.h:50</div></div>
+<div class="ttc" id="aclassRunningState_html"><div class="ttname"><a href="classRunningState.html">RunningState</a></div><div class="ttdoc">Represents the state where the sorting animation is actively playing.</div><div class="ttdef"><b>Definition</b> SortingWindowStates.h:35</div></div>
+<div class="ttc" id="aclassSortingWindow_html"><div class="ttname"><a href="classSortingWindow.html">SortingWindow</a></div><div class="ttdef"><b>Definition</b> SortingWindow.h:21</div></div>
+<div class="ttc" id="aclassSortingWindow_html_aa4dd820955ee175a7464509402d5489c"><div class="ttname"><a href="classSortingWindow.html#aa4dd820955ee175a7464509402d5489c">SortingWindow::onUpdate</a></div><div class="ttdeci">void onUpdate(const std::vector&lt; int &gt; &amp;data) override</div><div class="ttdoc">Callback method invoked when the state of the Observable changes.</div><div class="ttdef"><b>Definition</b> SortingWindow.cpp:193</div></div>
 <div class="ttc" id="aclassSortingWindow_html_af3f58bfc5d6dcbfbde5808fb8448c06e"><div class="ttname"><a href="classSortingWindow.html#af3f58bfc5d6dcbfbde5808fb8448c06e">SortingWindow::~SortingWindow</a></div><div class="ttdeci">~SortingWindow() override</div></div>
 <div class="ttc" id="aclassVisualizationWidget_html"><div class="ttname"><a href="classVisualizationWidget.html">VisualizationWidget</a></div><div class="ttdef"><b>Definition</b> VisualizationWidget.h:6</div></div>
 <div class="ttc" id="aclasscore_1_1patterns_1_1IObserver_html"><div class="ttname"><a href="classcore_1_1patterns_1_1IObserver.html">core::patterns::IObserver</a></div><div class="ttdoc">Observer interface that receives updates from an Observable.</div><div class="ttdef"><b>Definition</b> Observer.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 14 2026 12:03:26 for Algorithms Benchmark by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Apr 14 2026 12:05:41 for Algorithms Benchmark by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

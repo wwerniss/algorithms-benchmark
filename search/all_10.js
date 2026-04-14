@@ -17,10 +17,11 @@ var searchData=
   ['sortingwindow_14',['sortingwindow',['../classSortingWindow.html',1,'SortingWindow'],['../classSortingWindow.html#a01ef5b9be50460d7244be5c15081b1bd',1,'SortingWindow::SortingWindow()']]],
   ['sortingwindow_2ecpp_15',['SortingWindow.cpp',['../SortingWindow_8cpp.html',1,'']]],
   ['sortingwindow_2eh_16',['SortingWindow.h',['../SortingWindow_8h.html',1,'']]],
-  ['sortmemento_2eh_17',['SortMemento.h',['../SortMemento_8h.html',1,'']]],
-  ['sortstatememento_18',['sortstatememento',['../classcore_1_1sorting_1_1SortStateMemento.html',1,'core::sorting::SortStateMemento&lt; T &gt;'],['../classcore_1_1sorting_1_1SortStateMemento.html#ad7af6d6d8660fa65f26d9e3e78771ac5',1,'core::sorting::SortStateMemento::SortStateMemento()']]],
-  ['sorttimerdecorator_19',['sorttimerdecorator',['../classcore_1_1sorting_1_1SortTimerDecorator.html',1,'core::sorting::SortTimerDecorator&lt; T &gt;'],['../classcore_1_1sorting_1_1SortTimerDecorator.html#af7619fa024e2f867df878b4ada565b7f',1,'core::sorting::SortTimerDecorator::SortTimerDecorator()']]],
-  ['startsynth_20',['startSynth',['../classAudioSynthesizer.html#a594ef1e62632470d2b8a5e271a98b61a',1,'AudioSynthesizer']]],
-  ['stepcommand_21',['stepcommand',['../classcore_1_1sorting_1_1StepCommand.html',1,'core::sorting::StepCommand&lt; T &gt;'],['../classcore_1_1sorting_1_1StepCommand.html#ac9e915da2ecda026ff44d4002460fce7',1,'core::sorting::StepCommand::StepCommand()']]],
-  ['stepcommand_2eh_22',['StepCommand.h',['../StepCommand_8h.html',1,'']]]
+  ['sortingwindowstates_2eh_17',['SortingWindowStates.h',['../SortingWindowStates_8h.html',1,'']]],
+  ['sortmemento_2eh_18',['SortMemento.h',['../SortMemento_8h.html',1,'']]],
+  ['sortstatememento_19',['sortstatememento',['../classcore_1_1sorting_1_1SortStateMemento.html',1,'core::sorting::SortStateMemento&lt; T &gt;'],['../classcore_1_1sorting_1_1SortStateMemento.html#ad7af6d6d8660fa65f26d9e3e78771ac5',1,'core::sorting::SortStateMemento::SortStateMemento()']]],
+  ['sorttimerdecorator_20',['sorttimerdecorator',['../classcore_1_1sorting_1_1SortTimerDecorator.html',1,'core::sorting::SortTimerDecorator&lt; T &gt;'],['../classcore_1_1sorting_1_1SortTimerDecorator.html#af7619fa024e2f867df878b4ada565b7f',1,'core::sorting::SortTimerDecorator::SortTimerDecorator()']]],
+  ['startsynth_21',['startSynth',['../classAudioSynthesizer.html#a594ef1e62632470d2b8a5e271a98b61a',1,'AudioSynthesizer']]],
+  ['stepcommand_22',['stepcommand',['../classcore_1_1sorting_1_1StepCommand.html',1,'core::sorting::StepCommand&lt; T &gt;'],['../classcore_1_1sorting_1_1StepCommand.html#ac9e915da2ecda026ff44d4002460fce7',1,'core::sorting::StepCommand::StepCommand()']]],
+  ['stepcommand_2eh_23',['StepCommand.h',['../StepCommand_8h.html',1,'']]]
 ];

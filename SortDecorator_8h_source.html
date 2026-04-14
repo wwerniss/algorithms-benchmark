@@ -118,7 +118,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classcore_1_1sorting_1_1SortTimerDecorator.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="classcore_1_1sorting_1_1SortTimerDecorator.html">SortTimerDecorator</a> : <span class="keyword">public</span> <a class="code hl_class" href="classcore_1_1sorting_1_1ISortStrategy.html">ISortStrategy</a>&lt;T&gt; {</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">private</span>:</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    std::unique_ptr&lt;ISortStrategy&lt;T&gt;&gt; wrapped_;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">long</span> <span class="keywordtype">long</span> lastDurationMs_ = 0;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">double</span> lastDurationMs_ = 0.0;</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
 <div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
@@ -137,7 +137,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keyword">auto</span> start = std::chrono::high_resolution_clock::now();</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        wrapped_-&gt;sort(data);</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keyword">auto</span> end = std::chrono::high_resolution_clock::now();</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        lastDurationMs_ = std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(end - start).count();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        lastDurationMs_ = std::chrono::duration&lt;double, std::milli&gt;(end - start).count();</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
 </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
@@ -160,7 +160,7 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
 <div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classcore_1_1sorting_1_1SortTimerDecorator.html#a5e3def82a085fb5c9e9d0b8db1c00313">   43</a></span>    <span class="keywordtype">long</span> <span class="keywordtype">long</span> <a class="code hl_function" href="classcore_1_1sorting_1_1SortTimerDecorator.html#a5e3def82a085fb5c9e9d0b8db1c00313">getLastDurationMs</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classcore_1_1sorting_1_1SortTimerDecorator.html#aad9ee5fbbace10281d625d39ce66a788">   43</a></span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classcore_1_1sorting_1_1SortTimerDecorator.html#aad9ee5fbbace10281d625d39ce66a788">getLastDurationMs</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">return</span> lastDurationMs_;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
 </div>
@@ -175,16 +175,16 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclasscore_1_1sorting_1_1SortTimerDecorator_html"><div class="ttname"><a href="classcore_1_1sorting_1_1SortTimerDecorator.html">core::sorting::SortTimerDecorator</a></div><div class="ttdef"><b>Definition</b> SortDecorator.h:11</div></div>
 <div class="ttc" id="aclasscore_1_1sorting_1_1SortTimerDecorator_html_a1ed4dcb55119edfe1cf7c9cdde48d413"><div class="ttname"><a href="classcore_1_1sorting_1_1SortTimerDecorator.html#a1ed4dcb55119edfe1cf7c9cdde48d413">core::sorting::SortTimerDecorator::addObserver</a></div><div class="ttdeci">void addObserver(patterns::IObserver&lt; T &gt; *observer)</div><div class="ttdef"><b>Definition</b> SortDecorator.h:31</div></div>
 <div class="ttc" id="aclasscore_1_1sorting_1_1SortTimerDecorator_html_a50f68766f1778e47a7b8af6021874dac"><div class="ttname"><a href="classcore_1_1sorting_1_1SortTimerDecorator.html#a50f68766f1778e47a7b8af6021874dac">core::sorting::SortTimerDecorator::removeObserver</a></div><div class="ttdeci">void removeObserver(patterns::IObserver&lt; T &gt; *observer)</div><div class="ttdef"><b>Definition</b> SortDecorator.h:35</div></div>
-<div class="ttc" id="aclasscore_1_1sorting_1_1SortTimerDecorator_html_a5e3def82a085fb5c9e9d0b8db1c00313"><div class="ttname"><a href="classcore_1_1sorting_1_1SortTimerDecorator.html#a5e3def82a085fb5c9e9d0b8db1c00313">core::sorting::SortTimerDecorator::getLastDurationMs</a></div><div class="ttdeci">long long getLastDurationMs() const</div><div class="ttdef"><b>Definition</b> SortDecorator.h:43</div></div>
 <div class="ttc" id="aclasscore_1_1sorting_1_1SortTimerDecorator_html_a7af8071309520c85cb7855b59a592b54"><div class="ttname"><a href="classcore_1_1sorting_1_1SortTimerDecorator.html#a7af8071309520c85cb7855b59a592b54">core::sorting::SortTimerDecorator::doSort</a></div><div class="ttdeci">void doSort(std::vector&lt; T &gt; &amp;data) override</div><div class="ttdef"><b>Definition</b> SortDecorator.h:20</div></div>
 <div class="ttc" id="aclasscore_1_1sorting_1_1SortTimerDecorator_html_a84a8d2ef08e8033f1d2c5a51488682a6"><div class="ttname"><a href="classcore_1_1sorting_1_1SortTimerDecorator.html#a84a8d2ef08e8033f1d2c5a51488682a6">core::sorting::SortTimerDecorator::getName</a></div><div class="ttdeci">std::string getName() const override</div><div class="ttdef"><b>Definition</b> SortDecorator.h:39</div></div>
+<div class="ttc" id="aclasscore_1_1sorting_1_1SortTimerDecorator_html_aad9ee5fbbace10281d625d39ce66a788"><div class="ttname"><a href="classcore_1_1sorting_1_1SortTimerDecorator.html#aad9ee5fbbace10281d625d39ce66a788">core::sorting::SortTimerDecorator::getLastDurationMs</a></div><div class="ttdeci">double getLastDurationMs() const</div><div class="ttdef"><b>Definition</b> SortDecorator.h:43</div></div>
 <div class="ttc" id="aclasscore_1_1sorting_1_1SortTimerDecorator_html_af7619fa024e2f867df878b4ada565b7f"><div class="ttname"><a href="classcore_1_1sorting_1_1SortTimerDecorator.html#af7619fa024e2f867df878b4ada565b7f">core::sorting::SortTimerDecorator::SortTimerDecorator</a></div><div class="ttdeci">SortTimerDecorator(std::unique_ptr&lt; ISortStrategy&lt; T &gt; &gt; wrapped)</div><div class="ttdef"><b>Definition</b> SortDecorator.h:17</div></div>
 <div class="ttc" id="aclasscore_1_1sorting_1_1SortTimerDecorator_html_afad13be009d12c159c7b4e741d4fc3f4"><div class="ttname"><a href="classcore_1_1sorting_1_1SortTimerDecorator.html#afad13be009d12c159c7b4e741d4fc3f4">core::sorting::SortTimerDecorator::sort</a></div><div class="ttdeci">void sort(std::vector&lt; T &gt; &amp;data)</div><div class="ttdef"><b>Definition</b> SortDecorator.h:24</div></div>
 <div class="ttc" id="anamespacecore_html"><div class="ttname"><a href="namespacecore.html">core</a></div><div class="ttdef"><b>Definition</b> BenchmarkHistoryManager.h:7</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 14 2026 12:03:26 for Algorithms Benchmark by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Apr 14 2026 12:05:41 for Algorithms Benchmark by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

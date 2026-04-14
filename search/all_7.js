@@ -1,7 +1,12 @@
 var searchData=
 [
-  ['height_0',['height',['../structcore_1_1trees_1_1AVLNode.html#a08f45604ec8b620a915f74a61b3f4335',1,'core::trees::AVLNode']]],
-  ['historywindow_1',['historywindow',['../classHistoryWindow.html',1,'HistoryWindow'],['../classHistoryWindow.html#aa10d75dfa8a5018a9e37bb477d15373d',1,'HistoryWindow::HistoryWindow()']]],
-  ['historywindow_2ecpp_2',['HistoryWindow.cpp',['../HistoryWindow_8cpp.html',1,'']]],
-  ['historywindow_2eh_3',['HistoryWindow.h',['../HistoryWindow_8h.html',1,'']]]
+  ['handleplaypause_0',['handleplaypause',['../classIWindowActivityState.html#a02a6faf95bb84dc2b3bc3afb92b5f71b',1,'IWindowActivityState::handlePlayPause()'],['../classRunningState.html#a76216a9654eff859258dcf279acdf663',1,'RunningState::handlePlayPause()'],['../classPausedState.html#a95929d4c083e8916b638afd39e6e644e',1,'PausedState::handlePlayPause()'],['../classIdleState.html#adbf3691bfac945256eddfc4714219164',1,'IdleState::handlePlayPause()']]],
+  ['handlesortend_1',['handlesortend',['../classIWindowActivityState.html#a909d26b31ebbfd9ab04c6d76987441ef',1,'IWindowActivityState::handleSortEnd()'],['../classRunningState.html#a98ec8158874808cd866210c1e1f64fdb',1,'RunningState::handleSortEnd()'],['../classPausedState.html#abc9d65ccc31300fae24044c1d99a8224',1,'PausedState::handleSortEnd()'],['../classIdleState.html#a5581b312f2375d7ef4eb5147a2cd7dec',1,'IdleState::handleSortEnd()']]],
+  ['handlesortstart_2',['handlesortstart',['../classIWindowActivityState.html#a785e8a2df5e56f79e8e9a87144a9e554',1,'IWindowActivityState::handleSortStart()'],['../classRunningState.html#a58eb398b02ff8336206b96c9155ab56c',1,'RunningState::handleSortStart()'],['../classPausedState.html#a46432ebb5e498b04bdef29cf17fccff8',1,'PausedState::handleSortStart()'],['../classIdleState.html#ac632299da13882d45b0f8d5efe86f2ac',1,'IdleState::handleSortStart(SortingWindow *window) override']]],
+  ['handlestepbackward_3',['handlestepbackward',['../classIdleState.html#aba7efb12e9f0d4bad6fc7108b684031c',1,'IdleState::handleStepBackward()'],['../classPausedState.html#a1ecb04c8c6600497d749fe968981c3a7',1,'PausedState::handleStepBackward()'],['../classRunningState.html#aa1acafcc13054e74102843f5c6ee2afc',1,'RunningState::handleStepBackward()'],['../classIWindowActivityState.html#adceb01c6c6ba47ed326281593f942aa2',1,'IWindowActivityState::handleStepBackward()']]],
+  ['handlestepforward_4',['handlestepforward',['../classRunningState.html#a4865d55ab6d1a52add0775fb6da35bc6',1,'RunningState::handleStepForward()'],['../classPausedState.html#ac2c16f492af50e0dfc269895caf13bb0',1,'PausedState::handleStepForward()'],['../classIdleState.html#a78c1ed4524e00087e787f610f8e1ce3e',1,'IdleState::handleStepForward()'],['../classIWindowActivityState.html#a19041710ed0532120f43ed6962573af6',1,'IWindowActivityState::handleStepForward()']]],
+  ['height_5',['height',['../structcore_1_1trees_1_1AVLNode.html#a08f45604ec8b620a915f74a61b3f4335',1,'core::trees::AVLNode']]],
+  ['historywindow_6',['historywindow',['../classHistoryWindow.html',1,'HistoryWindow'],['../classHistoryWindow.html#aa10d75dfa8a5018a9e37bb477d15373d',1,'HistoryWindow::HistoryWindow()']]],
+  ['historywindow_2ecpp_7',['HistoryWindow.cpp',['../HistoryWindow_8cpp.html',1,'']]],
+  ['historywindow_2eh_8',['HistoryWindow.h',['../HistoryWindow_8h.html',1,'']]]
 ];
